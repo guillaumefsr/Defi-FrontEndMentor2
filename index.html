@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+    font-family: 'big_shoulders_displaybold';
+    src: url('font/BigShoulder/bigshouldersdisplay-bold-webfont.woff2') format('woff2'),
+         url('font/BigShoulder/bigshouldersdisplay-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+    @font-face {
+    font-family: 'lexend_decaregular';
+    src: url('font/LexendDeca/lexenddeca-regular-webfont.woff2') format('woff2'),
+         url('font/LexendDeca/lexenddeca-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color:  hsl(0, 0%, 95%);
+    }
+    .card{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      height: auto;
+      display: flex;
+      font-size: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    h1{
+     
+      color: hsl(0, 0%, 95%);
+      font-family: 'big_shoulders_displaybold';
+      text-transform: uppercase;
+    }
+    .card div{
+      justify-content: space-between;
+      width: 200px;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+
+    }
+    img{
+      height: 30px;
+      width: 50px;
+    }
+    .part1{
+      background-color: hsl(31, 77%, 52%);
+    }
+    .part2{
+      background-color: hsl(184, 100%, 22%);
+    }
+    .part3{
+      background-color:  hsl(179, 100%, 13%);
+    }
+    p{
+      font-family: 'lexend_decaregular';
+      color: hsla(0, 0%, 100%, 0.75);
+      margin-bottom: 50px;
+    }
+    .part1 button{
+      color: hsl(31, 77%, 52%);
+    }
+    .part2 button{
+      color: hsl(184, 100%, 22%);
+    }
+    .part3 button{
+      color:  hsl(179, 100%, 13%);
+    }
+    button{
+      border: none;
+      cursor: pointer;
+      height: 40px;
+      width: 130px;
+      border-radius: 20px;
+      background-color: white;
+    }
+    button:hover{
+      background: transparent;
+      color: white;
+      border: 2px solid white
+    }
+    @media (max-width: 1000px) {
+      .card {
+        flex-direction: column;
+      }
+      .card div{
+        height: 250px;
+      }
+      p{
+      margin-bottom: 10px;
+    }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="part1">
+      <img src="images/icon-sedans.svg">
+      <h1>Sedans</h1>
+      <p>
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+        or on your next road trip.
+      </p>
+      <button href="">Learn More</button>
+    </div>
+    <div class="part2">
+      <img src="images/icon-suvs.svg">
+
+      <h1>SUVs</h1>
+      <p>
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+        and off-road adventures. 
+      </p>
+      <button href="">Learn More</button>
+    </div>
+    <div class="part3">
+      <img src="images/icon-luxury.svg">
+
+      <h1>Luxury</h1>
+      <p> 
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+        rental and arrive in style.
+      </p>
+      <button href="">Learn More</button>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
